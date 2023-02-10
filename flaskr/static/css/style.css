@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Oswald:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     font-family: sans-serif;
     background: #eee;
@@ -15,6 +23,7 @@ h1 {
     color: #377ba8;
     margin: 1rem 0;
 }
+
 
 a {
     color: #377ba8;

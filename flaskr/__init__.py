@@ -37,4 +37,8 @@ def create_app(test_config=None):
     app.register_blueprint(blog.bp)
     app.add_url_rule('/', endpoint='index')
 
+    from . import funcionarios
+    app.register_blueprint(funcionarios.bp)
+    app.add_url_rule('/funcionarios', endpoint='index')
+
     return app

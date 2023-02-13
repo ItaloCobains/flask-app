@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>{% block title %}Funcionários{% endblock %}</h1>
+{% if g.user %}
+<a class="action" href="{{ url_for('funcionarios.create') }}">Adicionar funcionario</a>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+{% for funcionario in funcionarios %}
+a
+<div>
+	{{ funcionario['nome'] }}
+	{{ funcionario['cpf'] }}
+	{{ funcionario['email'] }}
+	{{ funcionario['telefone'] }}
+	{{ funcionario['cargo'] }}
+	{{ funcionario['salario'] }}
+	{{ funcionario['data_nascimento'] }}
+	{{ funcionario['data_admissao'] }}
+	{{ funcionario['data_demissao'] }}
+	{{ funcionario['endereco'] }}
+	{{ funcionario['cidade'] }}
+	{{ funcionario['estado'] }}
+	{{ funcionario['cep'] }}
+	{{ funcionario['pais'] }}
+	{{ funcionario['observacoes'] }}
+	{{ funcionario['created'] }}
+	{{ funcionario['updated'] }}
+	{{ funcionario['username'] }}
+	{{ funcionario['author_id'] }}
+</div>
+{% if not loop.last %}
+<hr>
+{% endif %}
+{% endfor %}
+{% endblock %}
